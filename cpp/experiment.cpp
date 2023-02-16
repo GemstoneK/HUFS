@@ -52,10 +52,10 @@ int main()
   // }
   // char s[] = "²ô¾î¾î¾ö!";
 
-  // string spritOfDol;
-  // cin >> spritOfDol;
-  // printf("%s", spritOfDol.c_str());
-  // cout << spritOfDol;
-  // cout << "Hello, World";
-  // return 0;
+  string spritOfDol;
+  cin >> spritOfDol;
+  printf("%s", spritOfDol.c_str());
+  cout << spritOfDol;
+  cout << "Hello, World";
+  return 0;
 }

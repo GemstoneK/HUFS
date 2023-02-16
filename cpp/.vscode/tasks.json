@@ -2,7 +2,9 @@
   "version": "2.0.0",
   "runner": "terminal",
   "echoCommand": true,
-  "presentation": { "reveal": "always" },
+  "presentation": {
+    "reveal": "always"
+  },
   "tasks": [
     {
       "type": "shell",
@@ -14,15 +16,13 @@
         "-o",
         "${fileDirname}\\${fileBasenameNoExtension}.exe"
       ],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
+      "group": "build",
       "problemMatcher": {
-        "fileLocation": ["relative", "${workspaceRoot}"],
+        "fileLocation": [
+          "relative",
+          "${workspaceRoot}"
+        ],
         "pattern": {
-          // The regular expression.
-          //Example to match: helloWorld.c:5:3: warning: implicit declaration of function 'prinft'
           "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning error):\\s+(.*)$",
           "file": 1,
           "line": 2,
@@ -42,15 +42,13 @@
         "-o",
         "${fileDirname}\\${fileBasenameNoExtension}.exe"
       ],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
+      "group": "build",
       "problemMatcher": {
-        "fileLocation": ["relative", "${workspaceRoot}"],
+        "fileLocation": [
+          "relative",
+          "${workspaceRoot}"
+        ],
         "pattern": {
-          // The regular expression.
-          //Example to match: helloWorld.c:5:3: warning: implicit declaration of function 'prinft'
           "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning error):\\s+(.*)$",
           "file": 1,
           "line": 2,
@@ -64,11 +62,56 @@
       "type": "shell",
       "label": "Run",
       "command": "${fileDirname}\\${fileBasenameNoExtension}.exe",
-      "problemMatcher": ["$gcc"],
+      "problemMatcher": [
+        "$gcc"
+      ],
       "group": {
         "kind": "test",
         "isDefault": true
       }
+    },
+    {
+      "type": "cppbuild",
+      "label": "C/C++: cpp.exe 활성 파일 빌드",
+      "command": "C:\\Program Files\\mingw64\\bin\\cpp.exe",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}\\${fileBasenameNoExtension}.exe"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "디버거에서 생성된 작업입니다."
+    },
+    {
+      "type": "cppbuild",
+      "label": "C/C++: g++.exe 활성 파일 빌드",
+      "command": "C:/Program Files/mingw64/bin/g++.exe",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}\\${fileBasenameNoExtension}.exe"
+      ],
+      "options": {
+        "cwd": "C:/Program Files/mingw64/bin"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": "build",
+      "detail": "디버거에서 생성된 작업입니다."
     }
   ]
 }
