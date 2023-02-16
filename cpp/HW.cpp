@@ -38,11 +38,11 @@ int main(){
   
   //세금 = 부가가치세(전기요금계의 10%, 원단위 미만 반올림) + 기반요금(전기요금계의 3.7%, 10원 미만 절사)
   int tax;
-  tax = round(fee * 0.1) + (floor(fee * 0.0037) * 10);
+  tax = round(fee * 0.1) + (int(fee * 0.0037) * 10);
   /*cout << (floor(fee * 0.0037) * 10);
   cout << fee;*/
   int elecFee = fee + tax;
-  elecFee = floor(elecFee * 0.1) * 10;
+  elecFee = int(elecFee * 0.1) * 10;
 
 
 
