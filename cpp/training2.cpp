@@ -118,20 +118,22 @@ int main()
 
   // 공백 입력, 초반 5번
   int i = 0;
-  while (i < number)
-  {
-    cout << setw(3) << " ";
-    i++;
-  }
 
   // 후반 2번
   int newLine = 0;
-  for (int date = 1, newLine = number; date <= 31; date++, newLine++)
+  for (int date = 1 - number, newLine = 0; date <= 31; date++, newLine++)
   {
-    cout << setw(3) << date;
-    if (newLine % 7 == 6)
+    if (date < 1)
     {
-      cout << endl;
+      cout << setw(3) << " ";
+    }
+    else
+    {
+      cout << setw(3) << date;
+      if (newLine % 7 == 6)
+      {
+        cout << endl;
+      }
     }
   }
 }
