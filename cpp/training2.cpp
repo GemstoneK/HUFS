@@ -125,19 +125,13 @@ int main()
   }
 
   // 후반 2번
-  int date = 1;
-  while (date <= endDate)
+  int newLine = 0;
+  for (int date = 1, newLine = number; date <= 31; date++, newLine++)
   {
-    for (int i = number; i < 7; i++)
+    cout << setw(3) << date;
+    if (newLine % 7 == 6)
     {
-      cout << setw(3) << date;
-      date++;
-      if (date > 31)
-      {
-        break;
-      }
+      cout << endl;
     }
-    cout << "\n";
-    number = 0; // number를 다시 0으로 초기화해서 7번 루프 돌도록 만들어줌
   }
 }
