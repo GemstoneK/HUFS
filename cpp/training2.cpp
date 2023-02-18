@@ -116,21 +116,16 @@ int main()
   }
   cout << "\n";
 
-  // 공백 입력, 초반 5번
-  int i = 0;
-
-  // 후반 2번
-  int newLine = 0;
-  for (int date = 1 - number, newLine = 0; date <= 31; date++, newLine++)
+  for (int date = 1 - number, newLine = 0; date <= 31; date++, newLine++) // 초기화를 두개 시킬 수 있다.
   {
     if (date < 1)
     {
-      cout << setw(3) << " ";
+      cout << setw(3) << " "; // 음수일 경우 공백 출력
     }
-    else
+    else // 양수일 경우 1~31까지 출력
     {
       cout << setw(3) << date;
-      if (newLine % 7 == 6)
+      if (newLine % 7 == 6) // 6번째에서 개행시킨다.
       {
         cout << endl;
       }
